@@ -5,6 +5,7 @@ import com.vitaz.pocket_translator_kmm.core.domain.util.Resource
 import com.vitaz.pocket_translator_kmm.translate.domain.history.HistoryDataSource
 import com.vitaz.pocket_translator_kmm.translate.domain.history.HistoryItem
 
+//Use case
 class Translate (
     private val client: TranslateClient,
     private val historyDataSource: HistoryDataSource
