@@ -13,6 +13,7 @@
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		8B3BCF02CAC7FCD7610A22BB /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBAB7F9B56329BFFE4A995C /* Pods_iosApp.framework */; };
 		E563A06C29639C0000F817AD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E563A06B29639C0000F817AD /* Colors.swift */; };
+		E563A0712963A91B00F817AD /* LanguageDropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E563A0702963A91B00F817AD /* LanguageDropDownItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CEBAB7F9B56329BFFE4A995C /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C63360BB564512CF55B68A /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		E563A06B29639C0000F817AD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E563A0702963A91B00F817AD /* LanguageDropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDownItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				E563A06D2963A8EF00F817AD /* translate */,
 				E563A06929639BAD00F817AD /* core */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
@@ -110,6 +113,30 @@
 				E563A06B29639C0000F817AD /* Colors.swift */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		E563A06D2963A8EF00F817AD /* translate */ = {
+			isa = PBXGroup;
+			children = (
+				E563A06E2963A8F800F817AD /* presentation */,
+			);
+			path = translate;
+			sourceTree = "<group>";
+		};
+		E563A06E2963A8F800F817AD /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E563A06F2963A8FF00F817AD /* component */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		E563A06F2963A8FF00F817AD /* component */ = {
+			isa = PBXGroup;
+			children = (
+				E563A0702963A91B00F817AD /* LanguageDropDownItem.swift */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				E563A0712963A91B00F817AD /* LanguageDropDownItem.swift in Sources */,
 				E563A06C29639C0000F817AD /* Colors.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
