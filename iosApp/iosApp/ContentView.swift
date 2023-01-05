@@ -14,6 +14,8 @@ struct ContentView: View {
                  translateUseCase: appModule.translateUseCase
              )
          }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
     }
 }
 
