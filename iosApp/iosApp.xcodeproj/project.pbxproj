@@ -25,6 +25,8 @@
 		E563A0772964F0DB00F817AD /* SwapLanguageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E563A0762964F0DB00F817AD /* SwapLanguageButton.swift */; };
 		E563A0792964F2F300F817AD /* IOSTranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E563A0782964F2F300F817AD /* IOSTranslateViewModel.swift */; };
 		E563A07B2964F31700F817AD /* TranslateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E563A07A2964F31700F817AD /* TranslateScreen.swift */; };
+		E58DA00E2976AB0C00A5A446 /* MicrophonePowerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA00D2976AB0C00A5A446 /* MicrophonePowerObserver.swift */; };
+		E58DA0102976AECB00A5A446 /* IOSVoiceToTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA00F2976AECB00A5A446 /* IOSVoiceToTextParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E563A0762964F0DB00F817AD /* SwapLanguageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapLanguageButton.swift; sourceTree = "<group>"; };
 		E563A0782964F2F300F817AD /* IOSTranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTranslateViewModel.swift; sourceTree = "<group>"; };
 		E563A07A2964F31700F817AD /* TranslateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateScreen.swift; sourceTree = "<group>"; };
+		E58DA00D2976AB0C00A5A446 /* MicrophonePowerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePowerObserver.swift; sourceTree = "<group>"; };
+		E58DA00F2976AECB00A5A446 /* IOSVoiceToTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				E58DA00C2976AACC00A5A446 /* voice_to_text */,
 				E563A06D2963A8EF00F817AD /* translate */,
 				E563A06929639BAD00F817AD /* core */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
@@ -172,6 +177,15 @@
 			path = component;
 			sourceTree = "<group>";
 		};
+		E58DA00C2976AACC00A5A446 /* voice_to_text */ = {
+			isa = PBXGroup;
+			children = (
+				E58DA00D2976AB0C00A5A446 /* MicrophonePowerObserver.swift */,
+				E58DA00F2976AECB00A5A446 /* IOSVoiceToTextParser.swift */,
+			);
+			path = voice_to_text;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,7 +198,7 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				525B7A43D5918C03785879FD /* Frameworks */,
-				62BC23B549C7DC0BD02911C5 /* [CP] Embed Pods Frameworks */,
+				EABB2B62CA3A749E3CEA797A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,23 +277,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		62BC23B549C7DC0BD02911C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E554DBE4295F83B200CDD56B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +294,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a sccd \"$SRCROOT/..\"\ncd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
 		};
+		EABB2B62CA3A749E3CEA797A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -305,9 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E532D4B02966369F009609B0 /* ProgressButton.swift in Sources */,
+				E58DA00E2976AB0C00A5A446 /* MicrophonePowerObserver.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				E532D4AC296634B6009609B0 /* GradientSurface.swift in Sources */,
 				E563A0712963A91B00F817AD /* LanguageDropDownItem.swift in Sources */,
+				E58DA0102976AECB00A5A446 /* IOSVoiceToTextParser.swift in Sources */,
 				E532D4AE29663613009609B0 /* LanguageDisplay.swift in Sources */,
 				E563A0752964F0A600F817AD /* SmallLanguageIcon.swift in Sources */,
 				E563A0792964F2F300F817AD /* IOSTranslateViewModel.swift in Sources */,
