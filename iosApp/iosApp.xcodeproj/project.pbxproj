@@ -27,6 +27,7 @@
 		E563A07B2964F31700F817AD /* TranslateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E563A07A2964F31700F817AD /* TranslateScreen.swift */; };
 		E58DA00E2976AB0C00A5A446 /* MicrophonePowerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA00D2976AB0C00A5A446 /* MicrophonePowerObserver.swift */; };
 		E58DA0102976AECB00A5A446 /* IOSVoiceToTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA00F2976AECB00A5A446 /* IOSVoiceToTextParser.swift */; };
+		E58DA0132978027200A5A446 /* IOSVoiceToTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA0122978027200A5A446 /* IOSVoiceToTextViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E563A07A2964F31700F817AD /* TranslateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateScreen.swift; sourceTree = "<group>"; };
 		E58DA00D2976AB0C00A5A446 /* MicrophonePowerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePowerObserver.swift; sourceTree = "<group>"; };
 		E58DA00F2976AECB00A5A446 /* IOSVoiceToTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextParser.swift; sourceTree = "<group>"; };
+		E58DA0122978027200A5A446 /* IOSVoiceToTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,10 +182,19 @@
 		E58DA00C2976AACC00A5A446 /* voice_to_text */ = {
 			isa = PBXGroup;
 			children = (
+				E58DA0112978026700A5A446 /* presentation */,
 				E58DA00D2976AB0C00A5A446 /* MicrophonePowerObserver.swift */,
 				E58DA00F2976AECB00A5A446 /* IOSVoiceToTextParser.swift */,
 			);
 			path = voice_to_text;
+			sourceTree = "<group>";
+		};
+		E58DA0112978026700A5A446 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E58DA0122978027200A5A446 /* IOSVoiceToTextViewModel.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E532D4B02966369F009609B0 /* ProgressButton.swift in Sources */,
+				E58DA0132978027200A5A446 /* IOSVoiceToTextViewModel.swift in Sources */,
 				E58DA00E2976AB0C00A5A446 /* MicrophonePowerObserver.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				E532D4AC296634B6009609B0 /* GradientSurface.swift in Sources */,
