@@ -2,25 +2,20 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-    
-    private let appModule = AppModule()
-    
+
+    let appModule: AppModule
+
     var body: some View {
         ZStack {
              Color.background
                  .ignoresSafeArea()
              TranslateScreen(
                  historyDataSource: appModule.historyDataSource,
-                 translateUseCase: appModule.translateUseCase
+                 translateUseCase: appModule.translateUseCase,
+                 parser: appModule.voiceParser
              )
          }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
